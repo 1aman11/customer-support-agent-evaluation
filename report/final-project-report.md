@@ -1,5 +1,11 @@
 # Customer Support Agent Evaluation
 
+## Project goal and context
+
+This project evaluates an e-commerce customer-support routing agent that assigns each incoming ticket to one of five operational queues: `order_status`, `refund_request`, `product_issue`, `account_help`, or `other`. Accurate routing matters because a wrong classification sends the customer to the wrong team, creating avoidable transfers, slower resolution, and additional support effort.
+
+Our goal was not only to improve this classifier, but to learn and demonstrate a repeatable agent-evaluation process that can be applied to future AI systems. Using a fixed 150-ticket labeled dataset, we reviewed the ground truth, established a reproducible baseline, annotated and clustered recurring failures, selected one high-impact category, made one focused prompt change, and reran the same cases to measure improvements and regressions. LangSmith traces connected aggregate metrics to individual decisions, while an LLM judge was calibrated against human labels. This report documents both the measured result and the evaluation workflow that produced it.
+
 ## Evaluation one-liner
 
 I measured exact-match routing accuracy, account-workflow failure count, regression count, latency, and token usage for an e-commerce support classifier on a fixed 150-ticket labeled dataset, using code-based comparison against reviewed ground-truth categories and LangSmith-traced baseline and improved runs. The pass bar was at least 95% accuracy, zero remaining failures in the selected target category, no more than one regression, and p95 latency below 1.5 seconds.
