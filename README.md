@@ -1,6 +1,6 @@
 # Customer Support Agent Evaluation — Submission
 
-This folder is the complete, self-contained project submission. It contains the 150-ticket evaluation dataset, the completed analysis workbook, preserved model and judge outputs, an executable verification notebook, LangSmith trace evidence, and the final report.
+This folder is the complete, self-contained evaluation submission for a customer support ticket agent. It contains the 150-ticket evaluation dataset, the completed analysis workbook, preserved model and judge outputs, an executable verification notebook, LangSmith trace evidence, and the final report.
 
 The files outside this folder in the source repository are instructor-provided starter materials and are not required to review or rerun this submission.
 
@@ -9,9 +9,9 @@ The files outside this folder in the source repository are instructor-provided s
 - Instructor reference results: 121/150 correct (80.7%), with 29 failures manually annotated and clustered.
 - Controlled Nebius baseline: 141/150 correct (94.0%).
 - Improved prompt: 149/150 correct (99.3%).
-- Target-category result: all 9 `Account_Workflow_Missed` failures were fixed.
+- Target-category result: On optimization of prompt, all failures from the chosen category (`Account_Workflow_Missed`)  was fixed.
 - Regression: one ticket (`t050`) changed from correct to incorrect.
-- Optional LLM judge: both tested judge models matched the human labels on all 29 reviewed failures.
+- LLM judge: both tested judge models matched the human labels on all 29 reviewed failures.
 
 ## What to review
 
@@ -38,7 +38,6 @@ The files outside this folder in the source repository are instructor-provided s
 4. Set `RUN_JUDGE_LIVE = True` to rerun both judges over the 29 human-labeled failures.
 5. Run all cells. Fresh CSVs and locally measured latency/token summaries are written to `results/`.
 
-The `.env` file is intentionally excluded because API keys must never be submitted. Live results may vary slightly if the hosted model or provider changes; the preserved CSVs, run IDs, and screenshots are the evidence for the reported experiment.
 
 ## Reproducibility design
 
@@ -50,4 +49,4 @@ The `.env` file is intentionally excluded because API keys must never be submitt
 - Each result row includes its LangSmith run ID.
 - Latency and token statistics for the completed runs are preserved in `results/operational_metrics.csv`.
 
-The Loom/Zoom walkthrough link should be supplied in the course submission form alongside this folder or its ZIP archive.
+
