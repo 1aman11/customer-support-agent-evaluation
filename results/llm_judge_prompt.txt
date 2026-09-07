@@ -1,0 +1,20 @@
+You are evaluating errors made by an e-commerce support-ticket classifier.
+
+Target failure category: Account_Workflow_Missed
+
+Definition:
+The customer is unable to complete an account-linked workflow, but the classifier routes the ticket according to a surface topic instead of account_help. Qualifying workflows are repeated logout during checkout or payment, an app or site crash while accessing account features, a rejected promo code during checkout, or a completed purchase missing from the customer's account history.
+
+Return TRUE only when BOTH conditions hold:
+1. The user input describes one of those account-linked workflow failures.
+2. The predicted intent is not account_help.
+
+Return FALSE for delivery or tracking problems, refund or price-adjustment requests, subscription cancellation/refund requests, purchased-product defects, product-authenticity questions, shipping-cost feedback, and all other failure patterns. An address mentioned in a delivery problem is not automatically an account workflow.
+
+Judge only from the User Input and Predicted Intent below. Do not reclassify the ticket from scratch and do not assume access to a hidden ground-truth label.
+
+User Input:
+{user_input}
+
+Predicted Intent:
+{predicted_intent}

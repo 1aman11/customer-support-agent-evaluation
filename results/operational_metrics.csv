@@ -1,0 +1,5 @@
+evaluation,run,judge_model,cases,p50_latency_s,p95_latency_s,total_tokens,avg_tokens,source
+classifier,Baseline,,150,0.603,0.936,45145,301.0,LangSmith completed traced run
+classifier,Improved,,150,0.574,0.997,56161,374.4,LangSmith completed traced run
+llm_judge,Judge GPT OSS,openai/gpt-oss-120b,29,0.772,1.119,13945,480.9,LangSmith completed traced run
+llm_judge,Judge Qwen,Qwen/Qwen3-235B-A22B-Instruct-2507,29,0.927,1.283,10046,346.4,LangSmith completed traced run

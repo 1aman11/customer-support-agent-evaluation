@@ -1,0 +1,20 @@
+# Credentials and local environments
+.env
+.env.*
+*.env
+!.env.example
+.venv/
+venv/
+
+# Notebook and Python-generated files
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Operating-system and Office temporary files
+.DS_Store
+~$*
+*.inspect.ndjson
+
+# Local packaging artifacts
+*.zip
